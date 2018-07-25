@@ -4,8 +4,10 @@ const logger = require("morgan");
 const index = require("./routes/index");
 const books = require("./routes/books.js");
 const authors = require("./routes/authors.js");
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 
